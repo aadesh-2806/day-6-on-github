@@ -8,7 +8,7 @@ void main()
 	printf("hello\nenter string=");
 	gets(a);
 
-	printf("\nenter char.=");
+	printf("\nenter char.="); 
 	gets(b);
 	
 	
