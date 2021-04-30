@@ -4,7 +4,7 @@
 int main()
 {
 	
-	char a[200];
+	char a[200]; 
 	int n,i;
 	
 	printf("welcome\nenter string= ");
