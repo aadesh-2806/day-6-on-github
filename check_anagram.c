@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<math.h>
+
+void main()
+{	
+	int i,b[50],r,j;
+	char a[50][50];
+	printf("hello\n");
+	for(i=0;i<2;i++)
+	{	
+		printf("enter string%d=",i+1);
+		gets(a[i]);
+		for(j=0;a[i][j]!='\0';j++);
+		b[i]=j;
+	}
+	if(b[0]!=b[1])
+	{
+		printf("false");
+	}
+	else
+	{
+		for(i=0;i<b[0];i++)
+		{
+			for(j=i+1;j<b[0];j++)
+			{
+				if(a[0][i]>a[0][j])
+				{
+					r=a[0][i];
+					a[0][i]=a[0][j];
+					a[0][j]=r;
+				}
+			}
+		}
+		for(i=0;i<b[1];i++)
+		{
+			for(j=i+1;j<b[1];j++)
+			{
+				if(a[1][i]>a[1][j])
+				{
+					r=a[1][i];
+					a[1][i]=a[1][j];
+					a[1][j]=r;
+				}
+			}
+		}
+		for(i=0;i<b[0];i++)
+		{
+			if(a[0][i]!=a[1][i])
+			{
+				break;
+			}
+		}
+		if(i==b[0])
+		{
+			printf("true");
+		}
+		else
+		{
+			printf("false");
+		}
+	}
+	getch();
+}
